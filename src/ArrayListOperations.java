@@ -6,29 +6,26 @@ public class ArrayListOperations {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Check if there is an integer input for N
-        if (!scanner.hasNextInt()) {
-            return;
-        }
-
+        // Read N (number of items)
+        if (!scanner.hasNextInt()) return;
         int n = scanner.nextInt();
+        
         ArrayList<String> cart = new ArrayList<>();
 
-        // Read N items and add them to the ArrayList
+        // Read the N items
         for (int i = 0; i < n; i++) {
             cart.add(scanner.next());
         }
 
-        // Read the item to search for
+        // Read the search item
         String searchItem = scanner.next();
 
-        // Sort the items alphabetically
+        // Sort alphabetically
         Collections.sort(cart);
 
-        // Output the sorted list in the required format
+        // Print Output exactly as specified
         System.out.println("Sorted Items: " + cart);
 
-        // Check if the specific item exists and print result
         if (cart.contains(searchItem)) {
             System.out.println("Found");
         } else {
